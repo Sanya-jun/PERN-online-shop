@@ -10,6 +10,8 @@ export default class DeviseStore {
     this._brands = [
       { id: 1, name: "Samsung" },
       { id: 2, name: "Apple" },
+      { id: 3, name: "Lenovo" },
+      { id: 4, name: "Honor" },
     ];
     this._devices = [
       {
@@ -42,6 +44,7 @@ export default class DeviseStore {
       },
     ];
     this._selectedType = {};
+    this._selectedBrand = {};
     makeAutoObservable(this);
   }
 
@@ -60,6 +63,10 @@ export default class DeviseStore {
     this._selectedType = type;
   }
 
+  setSelectedBrand(brand) {
+    this._selectedBrand = brand;
+  }
+
   get types() {
     return this._types;
   }
@@ -72,5 +79,7 @@ export default class DeviseStore {
   get selectedType() {
     return this._selectedType;
   }
+  get selectedBrand() {
+    return this._selectedBrand;
+  }
 }
-
