@@ -42,6 +42,27 @@ export default class DeviseStore {
         rating: 6,
         img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
       },
+      {
+        id: 5,
+        name: "Iphone 15 pro",
+        price: 250000,
+        rating: 6,
+        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
+      },
+      {
+        id: 6,
+        name: "Iphone 15 pro",
+        price: 250000,
+        rating: 6,
+        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
+      },
+      {
+        id: 7,
+        name: "Iphone 15 pro",
+        price: 250000,
+        rating: 6,
+        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
+      },
     ];
     this._selectedType = {};
     this._selectedBrand = {};
@@ -73,7 +94,7 @@ export default class DeviseStore {
   get brands() {
     return this._brands;
   }
-  get device() {
+  get devices() {
     return this._devices;
   }
   get selectedType() {
