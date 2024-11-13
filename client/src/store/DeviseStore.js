@@ -1,69 +1,9 @@
 import { makeAutoObservable } from "mobx";
 export default class DeviseStore {
   constructor() {
-    this._types = [
-      { id: 1, name: "Холодильник" },
-      { id: 2, name: "Смартфон" },
-      { id: 3, name: "Телевизоры" },
-      { id: 4, name: "Флешки" },
-    ];
-    this._brands = [
-      { id: 1, name: "Samsung" },
-      { id: 2, name: "Apple" },
-      { id: 3, name: "Lenovo" },
-      { id: 4, name: "Honor" },
-    ];
-    this._devices = [
-      {
-        id: 1,
-        name: "Iphone 12 pro",
-        price: 250000,
-        rating: 5,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 2,
-        name: "Iphone 13 pro",
-        price: 250000,
-        rating: 3,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 3,
-        name: "Iphone 14 pro",
-        price: 250000,
-        rating: 1,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 4,
-        name: "Iphone 15 pro",
-        price: 250000,
-        rating: 6,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 5,
-        name: "Iphone 15 pro",
-        price: 250000,
-        rating: 6,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 6,
-        name: "Iphone 15 pro",
-        price: 250000,
-        rating: 6,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-      {
-        id: 7,
-        name: "Iphone 15 pro",
-        price: 250000,
-        rating: 6,
-        img: "https://activ.kz/shop/media/products/iphone_11_black1222.jpg",
-      },
-    ];
+    this._types = [];
+    this._brands = [];
+    this._devices = [];
     this._selectedType = {};
     this._selectedBrand = {};
     makeAutoObservable(this);
