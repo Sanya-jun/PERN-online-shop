@@ -4,15 +4,20 @@ const $host = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
 });
 
-const $autHost = axios.create({
+const $authHost = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
 });
 
 const authInterceptor = (config) => {
   config.headers.authorization = `Bearer ${localStorage.getItem("token")}`;
+
   return config;
 };
+try {
+  $authHost.interceptors.request.use(authInterceptor);
+  console.log($authHost);
+} catch (error) {
+  console.log(error);
+}
 
-$autHost.interceptors.request.use(authInterceptor);
-
-export { $host, $autHost };
+export { $host, $authHost };

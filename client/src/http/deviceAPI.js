@@ -1,7 +1,8 @@
-import { $host, $autHost } from "./index";
+import { $host, $authHost } from "./index";
+import { jwtDecode } from "jwt-decode";
 
 export const createType = async (type) => {
-  const { data } = await $autHost.post("api/type", type);
+  const { data } = await $authHost.post("api/type", type);
   return data;
 };
 
@@ -11,7 +12,7 @@ export const fetchTypes = async () => {
 };
 
 export const createBrand = async (brand) => {
-  const { data } = await $autHost.post("api/brand", brand);
+  const { data } = await $authHost.post("api/brand", brand);
   return data;
 };
 
@@ -21,7 +22,7 @@ export const fetchBrands = async () => {
 };
 
 export const createDevice = async (device) => {
-  const { data } = await $autHost.post("api/device", device);
+  const { data } = await $authHost.post("api/device", device);
   return data;
 };
 

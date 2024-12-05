@@ -24,7 +24,7 @@ const NavBar = observer(() => {
           КупиДевайс
         </NavLink>
         {user.isAuth ? (
-          <Nav className="ml-avto" style={{ color: "white" }}>
+          <Nav className="ms-avto" style={{ color: "white" }}>
             <Button
               variant={"outline-light"}
               onClick={() => navigate(ADMIN_ROUTE)}
@@ -34,13 +34,13 @@ const NavBar = observer(() => {
             <Button
               variant={"outline-light"}
               onClick={() => logOut()}
-              className="ml-4"
+              className="ms-4"
             >
               Выйти
             </Button>
           </Nav>
         ) : (
-          <Nav className="ml-avto" style={{ color: "white" }}>
+          <Nav className="ms-avto" style={{ color: "white" }}>
             <Button
               variant={"outline-light"}
               onClick={() => navigate(LOGIN_ROUTE)}
