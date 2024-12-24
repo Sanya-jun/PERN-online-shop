@@ -46,6 +46,10 @@ const CreateDevice = observer(({ show, onHide }) => {
     formData.append("brandId", device.selectedBrand.id);
     formData.append("typeId", device.selectedType.id);
     formData.append("info", JSON.stringify(info));
+
+ 
+
+
     createDevice(formData).then((data) => onHide());
   };
 
@@ -139,10 +143,16 @@ const CreateDevice = observer(({ show, onHide }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="outline-danger" onClick={onHide}>
+        <Button 
+        variant="outline-danger" 
+        onClick={onHide}
+        >
           Закрыть
         </Button>
-        <Button variant="outline-success" onClick={addDevice}>
+        <Button 
+        variant="outline-success" 
+        onClick={addDevice}
+        >
           Добавить
         </Button>
       </Modal.Footer>
