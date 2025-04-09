@@ -12,27 +12,29 @@ const Admin = () => {
     <Container className="d-flex flex-column">
       <Button
         variant={"outline-dark"}
-        className="mt-2"
+        className="mt-3"
         onClick={() => setTypeVisible(true)}
       >
         Добавить тип
       </Button>
       <Button
         variant={"outline-dark"}
-        className="mt-2"
+        className="mt-3"
         onClick={() => setBrandVisible(true)}
       >
         Добавить бренд
       </Button>
       <Button
         variant={"outline-dark"}
-        className="mt-2"
+        className="mt-3"
         onClick={() => setDeviceVisible(true)}
       >
         Добавить устройство
       </Button>
       <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)} />
-      <CreateDevice  show={deviceVisible} onHide={() => setDeviceVisible(false)}
+      <CreateDevice
+        show={deviceVisible}
+        onHide={() => setDeviceVisible(false)}
       />
       <CreateType show={typeVisible} onHide={() => setTypeVisible(false)} />
     </Container>

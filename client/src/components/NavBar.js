@@ -21,7 +21,7 @@ const NavBar = observer(() => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <NavLink style={{ color: "white" }} to={SHOP_ROUTE}>
-          КупиДевайс
+          Главная страница
         </NavLink>
         {user.isAuth ? (
           <Nav className="ms-avto" style={{ color: "white" }}>
